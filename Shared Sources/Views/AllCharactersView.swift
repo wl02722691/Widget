@@ -18,6 +18,8 @@ struct AllCharactersView: View {
         VStack(spacing: 48) {
             ForEach(
                 characters.sorted { $0.healthLevel > $1.healthLevel }, id: \.self) { character in
+                
+                // 17: 用 SwiftUI Link 跳轉 (large Widget)
                 Link(destination: character.url) {
                     HStack {
                         Avatar(character: character)

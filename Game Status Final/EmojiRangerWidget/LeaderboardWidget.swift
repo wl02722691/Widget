@@ -57,7 +57,6 @@ struct LeaderboardWidgetEntryView: View {
 
 struct LeaderboardWidget: Widget {
     private let kind: String = "LeaderboardWidget"
-
     public var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: LeaderboardProvider(), placeholder: LeaderboardPlaceholderView()) { entry in
             LeaderboardWidgetEntryView(entry: entry)
@@ -77,6 +76,8 @@ struct LeaderboardWidget_Previews: PreviewProvider {
     }
 }
 
+// 18 理論上只能有一個主要的 Widget 所以利用 WidgetBundle 才能加 EmojiRangerWidget 與 LeaderboardWidget
+// 移動 @main L57 只會有 LeaderboardWidget
 @main
 struct EmojiRangerBundle: WidgetBundle {
     @WidgetBundleBuilder

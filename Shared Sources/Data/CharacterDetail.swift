@@ -83,6 +83,7 @@ struct CharacterDetail: Hashable, Codable, Identifiable {
     
     static let session = ImageURLProtocol.urlSession()
     
+    // 16: 用 local file 模擬遠端抓資料的樣子, widget 會對 urlSession 的回傳結果做出回應，包括 background sessions
     static func loadLeaderboardData(completion:@escaping ([CharacterDetail]?, Error?) -> Void) {
         // save a faux API to the temporary directory and fetch it
         // in your app you'll fetch it from a real API

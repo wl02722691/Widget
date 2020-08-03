@@ -8,7 +8,8 @@ A custom intent handler that provides a dynamic list of available characters.
 import Intents
 
 class IntentHandler: INExtension, DynamicCharacterSelectionIntentHandling {
-    
+    //19: dynamic set of option, 這是 asynchronous call 像是 timeline method
+    //20. update widget 從 dynamic intent
     func provideHeroOptionsCollection(for intent: DynamicCharacterSelectionIntent,
                                       with completion: @escaping (INObjectCollection<Hero>?, Error?) -> Void) {
         let characters: [Hero] = CharacterDetail.availableCharacters.map { character in

@@ -54,7 +54,7 @@ struct EmojiRangerWidget: Widget {
         }
         .configurationDisplayName("Ranger Detail")
         .description("See your favorite ranger.")
-        .supportedFamilies([.systemSmall])
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
